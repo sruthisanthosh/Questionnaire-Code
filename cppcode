@@ -1,0 +1,286 @@
+#include<iostream.h>
+#include<process.h>
+class quiz
+{
+ private:
+ int i,sc,c,count;
+ char ans;
+ public:
+ int science();//function to display questions related to science
+ int mathematics();//function to display questions related to mathematics
+ int escore();//function to display score of quiz no:1 
+ int mscore();//function to display score of quiz no:2
+ int dise();//function to display answers of science
+ int dism();//function to display answers of mathematics
+};
+int quiz::science()
+{
+ count=sc=0;
+ cout<<"CHOOSE LEVEL:\n(enter 1/2/3)";
+ cin>>c;
+ switch(c)
+ {
+ case 1:
+ cout<<"PLAY\n";                                                             
+ cout<<"LEVEL-EASY\n";
+ cout<<"Questions are\n";
+ cout<<"Q1:Sound pollution is measured in which unit?\n";
+ cout<<"(A)decibel"<<"\t"<<"(B)length"<<"\t"<<"(C)grams\n";
+ cin>>ans;
+ if(ans=='A')
+ escore();                           
+ cout<<"Q2:Which is the ozone day?\n";
+ cout<<"(A)june 9"<<"\t"<<"(B) sept 16"<<"\t"<<"(C)dec 14\n";
+ cin>>ans;
+ if(ans=='B')
+ escore();  
+ cout<<"Q3:Which is the common disease caused by pollution?\n";
+ cout<<"(A)cholera"<<"\t"<<"(B)headache"<<"\t"<<"(C)asthma\n";
+ cin>>ans;
+ if(ans=='C')
+ escore();  
+ cout<<"Q4:Which is the most polluted city in the world?\n";
+ cout<<"(A)kerala"<<"\t"<<"(B)mexico"<<"\t"<<"(C)kenya\n";
+ cin>>ans;
+ if(ans=='B')
+ escore();
+ cout<<"YOUR SCORE IS:\n"<<sc;   
+ break;
+ case 2:
+ cout<<"PLAY\n";                                                             
+ cout<<"LEVEL-MEDIUM\n";
+ cout<<"Questions are\n";
+ cout<<"Q1:Albinism is caused by which enzyme?\n";
+ cout<<"(A)Glucose"<<"\t"<<"(B)Tyrosinace"<<"\t"<<"(C)Albinic\n";
+ cin>>ans;
+ if(ans=='B')
+ escore();                               
+ cout<<"Q2:Which is the gas used in ice plant?\n";
+ cout<<"(A)Chlorine"<<"\t"<<"(B) Nitrate"<<"\t"<<"(C)Ammonia\n";
+ cin>>ans;
+ if(ans=='C')
+ escore();
+ cout<<"Q3:Which is the form of sugar found in fruits?\n";
+ cout<<"(A)Sucrose"<<"\t"<<"(B)Fructose"<<"\t"<<"(C)Glucose\n";
+ cin>>ans;
+ if(ans=='B') 
+ escore();
+ cout<<"Q4:Which is the largest carnivorous fish?\n";
+ cout<<"(A)Great White Shark"<<"\t"<<"(B)Blue Whale"<<"\t"<<"(C)Piranha\n";
+ cin>>ans;
+ if(ans=='A')
+ escore();
+ cout<<"YOUR SCORE IS:\n"<<sc;
+ break;
+ case 3:
+ cout<<"PLAY\n";                                                             
+ cout<<"LEVEL-HARD\n";
+ cout<<"Questions are\n";
+ cout<<"Q1:Caliciferol is which vitamin?\n";
+ cout<<"(A)Vitamin E"<<"\t"<<"(B)Vitamin D2"<<"\t"<<"(C)Vitamin C1\n";
+ cin>>ans;
+ if(ans=='B') 
+ escore();                             
+ cout<<"Q2:Who invented super computers?\n";
+ cout<<"(A)Charles Babbage"<<"\t"<<"(B)Seymour Cray"<<"\t"<<"(C)Donald Kunth\n";
+ cin>>ans;
+ if(ans=='B') 
+ escore();
+ cout<<"Q3:Who found the radio waves in space in 1931?\n";
+ cout<<"(A)Karl G Janski"<<"\t"<<"(B)Christopher Modulation"<<"\t"<<"(C)Robert Ventury\n";
+ cin>>ans;
+ if(ans=='A') 
+ escore();
+ cout<<"Q4:How much time is required light to reach the earth from sun?\n";
+ cout<<"(A)10 minutes"<<"\t"<<"(B)28 minutes"<<"\t"<<"(C)8 minutes\n";
+ cin>>ans;
+ if(ans=='C') 
+ escore();
+ cout<<"YOUR SCORE IS:\n"<<sc;
+ break;
+ default:cout<<" wrong choice:(\n";
+ }
+ return 0;
+}
+int quiz::mathematics()
+{
+ count=sc=0;
+ cout<<"CHOOSE LEVEL:\n(enter 1/2/3)";cin>>c;
+ switch(c)
+ {
+ case 1:
+ cout<<"PLAY\n";                                                             
+ cout<<"LEVEL-EASY\n";
+ cout<<"Questions are\n";
+ cout<<"Q1:In Roman numeral 100 is represented by what?\n";
+ cout<<"(A)D"<<"\t"<<"(B)C"<<"\t"<<"(C)L\n";
+ cin>>ans;
+ if(ans=='B') 
+ mscore();   
+ cout<<"Q2:Which is the last numeral discovered in the world?\n";
+ cout<<"(A)5"<<"\t"<<"(B)0"<<"\t"<<"(C)1\n";
+ cin>>ans;
+ if(ans=='B') 
+ mscore();   
+ cout<<"Q3:A duodecagon has how many sides?\n";
+ cout<<"(A)12"<<"\t"<<"(B)24"<<"\t"<<"(C)36\n";
+ cin>>ans;
+ if(ans=='A') 
+ mscore();   
+ cout<<"Q4:Who is the mathematician known as the'Euclid of India?\n";
+ cout<<"(A)C.V.Raman"<<"\t"<<"(B)Aryabhatt"<<"\t"<<"(C)Bhaskaracharya\n";
+ cin>>ans;
+ if(ans=='C') 
+ mscore();
+ cout<<"YOUR SCORE IS:\n"<<sc;   
+ break;
+ case 2:
+ cout<<"PLAY\n";                                                             
+ cout<<"LEVEL-MEDIUM\n";
+ cout<<"Questions are\n";
+ cout<<"Q1:'Numbers reign the world'.Who made this opinion?\n";
+ cout<<"(A)Pythagoras"<<"\t"<<"(B)Blaise Pascal"<<"\t"<<"(C)Aljaber\n";
+  cin>>ans;
+ if(ans=='A') 
+ mscore();
+ cout<<"Q2:Who invented Logarithm?\n";
+ cout<<"(A)Blaise Pascal"<<"\t"<<"(B)John Napier"<<"\t"<<"(C)Robert Recorde\n";
+  cin>>ans;
+ if(ans=='B') 
+ mscore();
+ cout<<"Q3:What is a figure enclosed by straight lines called?\n";
+ cout<<"(A)polygon"<<"\t"<<"(B)triangle"<<"\t"<<"(C)hexagon\n";
+  cin>>ans;
+ if(ans=='A') 
+ mscore();
+ cout<<"Q4:Who found the mathematical symbol=(is equal to)?\n";
+ cout<<"(A)Robert Recorde"<<"\t"<<"(B)Aryabhatt"<<"\t"<<"(C)G H Hardy\n";
+  cin>>ans;
+ if(ans=='B') 
+ mscore();
+ cout<<"YOUR SCORE IS:\n"<<sc;
+ break;
+ case 3:
+ cout<<"PLAY\n";                                                             
+ cout<<"LEVEL-HARD\n";
+ cout<<"Questions are\n";
+ cout<<"Q1:Who is known as the father of modern mathematics?\n";
+ cout<<"(A)Rene Decarthe"<<"\t"<<"(B)Sreenivasa Ramanujan"<<"\t"<<"(C)Johan Widman\n";
+ cin>>ans;
+ if(ans=='B') 
+ mscore();
+ cout<<"Q2:What is the double of 1/8?\n";
+ cout<<"(A)1/16"<<"\t"<<"(B)1/4"<<"\t"<<"(C)1/24\n";
+ cin>>ans;
+ if(ans=='B') 
+ mscore();
+ cout<<"Q3:From where did the word ;mathematics' originate?\n";
+ cout<<"(A)Arabic Word"<<"\t"<<"(B)English Word"<<"\t"<<"(C)Greek word\n";
+ cin>>ans;
+ if(ans=='B') 
+ mscore();
+ cout<<"Q3:What is a googol?\n";
+ cout<<"(A)10^10"<<"\t"<<"(B)10^1000"<<"\t"<<"(C)10^100\n";
+ cin>>ans;
+ if(ans=='B') 
+ mscore();
+ cout<<"YOUR SCORE IS:\n"<<sc;
+ break;
+ default:cout<<"Wrong choice:(\n";
+ }
+ 
+ return 0;
+} 
+int quiz::escore()
+{
+  {sc+=10;
+ count++;
+ }
+ return sc;
+}
+int quiz::mscore()
+{ {sc+=10;
+ count++;
+ }
+ return sc;
+}
+int quiz::dise()
+{
+ switch(c)
+ {
+ case 1:
+ cout<<"Ans1:(A)\n"<<"Ans2:(B)\n"<<"Ans3:(C)\n"<<"Ans4:(B)\n";
+ break;
+ case 2:
+ cout<<"Ans1:(B)\n"<<"Ans2:(C)\n"<<"Ans3:(B)\n"<<"Ans4:(A)\n";
+ break;
+ case 3:
+ cout<<"Ans1:(B)\n"<<"Ans2:(B)\n"<<"Ans3:(A)\n"<<"Ans4:(C)\n";
+ break;
+ default:cout<<"wrong choice:(\n";
+ }
+ return 0;
+}  
+int quiz::dism()
+{
+ switch(c)
+ {
+ case 1:
+ cout<<"Ans1:(B)\n"<<"Ans2:(B)\n"<<"Ans3:(A)\n"<<"Ans4:(C)\n";
+ break;
+ case 2:
+ cout<<"Ans1:(A)\n"<<"Ans2:(B)\n"<<"Ans3:(C)\n"<<"Ans4:(A)\n";
+ break;
+ case 3:
+ cout<<"Ans1:(A)\n"<<"Ans2:(B)\n"<<"Ans3:(C)\n"<<"Ans4:(C)\n";
+ break;
+ default:cout<<"wrong choice:(\n";
+ }
+ return 0;
+}  
+int main()
+{
+ quiz q;
+ int ch;
+ char name[10],yn;
+ cout<<"Menu\n"<<"1.Science\n"<<"2.Maths\n";
+ cout<<"Enter your choice:(pls enter 1(science)/2(maths))\n";                 
+  
+ cin>>ch;
+ switch (ch)
+ {
+  case 1:
+  cout<<"Enter your name:\n";
+  cin>>name;
+  q.science();
+  cout<<"\nWant to know the answers:\n(y/n)";
+  cin>>yn;
+  if(yn=='N'||yn=='n')
+  cout<<"\nTHANKYOU FOR PLAYING\n"<<"\t"<<":-$\n";
+  {
+  if(yn=='Y'||yn=='y')
+  cout<<"Answers of quiz no:1 is\n";
+  q.dise();
+  cout<<"\nTHANKYOU FOR PLAYING\n"<<"\t"<<":-$\n";
+  exit(0);
+  }
+  break;
+  case 2:
+  cout<<"Enter your name:\n";
+  cin>>name;
+  q.mathematics();
+  q.mscore();
+  cout<<"\nWant to know the answers:\n(y/n)";
+  cin>>yn;
+  if(yn=='Y'||yn=='y')
+  cout<<"Answers of quiz no:2 is\n";
+  q.dism();
+  if(yn=='N'||yn=='n')
+  cout<<"\nTHANKYOU FOR PLAYING\n"<<"\t"<<":-$\n";
+  break;
+ default:cout<<"Wrong choice:(\n";
+} 
+ return 0;
+}   
+
+
